@@ -10,33 +10,245 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ProductsRouteImport } from './routes/products'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as AdminCustomersRouteImport } from './routes/admin.customers'
+import { Route as AdminDashboardRouteImport } from './routes/admin.dashboard'
+import { Route as AdminInventoryRouteImport } from './routes/admin.inventory'
+import { Route as AdminLedgerRouteImport } from './routes/admin.ledger'
+import { Route as AdminLoginRouteImport } from './routes/admin.login'
+import { Route as AdminPaymentsRouteImport } from './routes/admin.payments'
+import { Route as AdminProductsRouteImport } from './routes/admin.products'
+import { Route as AdminSuppliersRouteImport } from './routes/admin.suppliers'
+import { Route as AdminPurchasesIndexRouteImport } from './routes/admin.purchases.index'
+import { Route as AdminPurchasesCreateRouteImport } from './routes/admin.purchases.create'
+import { Route as AdminSalesIndexRouteImport } from './routes/admin.sales.index'
+import { Route as AdminSalesCreateRouteImport } from './routes/admin.sales.create'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsRoute = ProductsRouteImport.update({
+  id: '/products',
+  path: '/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminCustomersRoute = AdminCustomersRouteImport.update({
+  id: '/admin/customers',
+  path: '/admin/customers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminDashboardRoute = AdminDashboardRouteImport.update({
+  id: '/admin/dashboard',
+  path: '/admin/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminInventoryRoute = AdminInventoryRouteImport.update({
+  id: '/admin/inventory',
+  path: '/admin/inventory',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLedgerRoute = AdminLedgerRouteImport.update({
+  id: '/admin/ledger',
+  path: '/admin/ledger',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminLoginRoute = AdminLoginRouteImport.update({
+  id: '/admin/login',
+  path: '/admin/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPaymentsRoute = AdminPaymentsRouteImport.update({
+  id: '/admin/payments',
+  path: '/admin/payments',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminProductsRoute = AdminProductsRouteImport.update({
+  id: '/admin/products',
+  path: '/admin/products',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSuppliersRoute = AdminSuppliersRouteImport.update({
+  id: '/admin/suppliers',
+  path: '/admin/suppliers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPurchasesIndexRoute = AdminPurchasesIndexRouteImport.update({
+  id: '/admin/purchases/',
+  path: '/admin/purchases/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminPurchasesCreateRoute = AdminPurchasesCreateRouteImport.update({
+  id: '/admin/purchases/create',
+  path: '/admin/purchases/create',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSalesIndexRoute = AdminSalesIndexRouteImport.update({
+  id: '/admin/sales/',
+  path: '/admin/sales/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSalesCreateRoute = AdminSalesCreateRouteImport.update({
+  id: '/admin/sales/create',
+  path: '/admin/sales/create',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/products': typeof ProductsRoute
+  '/services': typeof ServicesRoute
+  '/admin/customers': typeof AdminCustomersRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/inventory': typeof AdminInventoryRoute
+  '/admin/ledger': typeof AdminLedgerRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/payments': typeof AdminPaymentsRoute
+  '/admin/products': typeof AdminProductsRoute
+  '/admin/suppliers': typeof AdminSuppliersRoute
+  '/admin/purchases/create': typeof AdminPurchasesCreateRoute
+  '/admin/sales/create': typeof AdminSalesCreateRoute
+  '/admin/purchases/': typeof AdminPurchasesIndexRoute
+  '/admin/sales/': typeof AdminSalesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/products': typeof ProductsRoute
+  '/services': typeof ServicesRoute
+  '/admin/customers': typeof AdminCustomersRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/inventory': typeof AdminInventoryRoute
+  '/admin/ledger': typeof AdminLedgerRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/payments': typeof AdminPaymentsRoute
+  '/admin/products': typeof AdminProductsRoute
+  '/admin/suppliers': typeof AdminSuppliersRoute
+  '/admin/purchases/create': typeof AdminPurchasesCreateRoute
+  '/admin/sales/create': typeof AdminSalesCreateRoute
+  '/admin/purchases': typeof AdminPurchasesIndexRoute
+  '/admin/sales': typeof AdminSalesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/products': typeof ProductsRoute
+  '/services': typeof ServicesRoute
+  '/admin/customers': typeof AdminCustomersRoute
+  '/admin/dashboard': typeof AdminDashboardRoute
+  '/admin/inventory': typeof AdminInventoryRoute
+  '/admin/ledger': typeof AdminLedgerRoute
+  '/admin/login': typeof AdminLoginRoute
+  '/admin/payments': typeof AdminPaymentsRoute
+  '/admin/products': typeof AdminProductsRoute
+  '/admin/suppliers': typeof AdminSuppliersRoute
+  '/admin/purchases/create': typeof AdminPurchasesCreateRoute
+  '/admin/sales/create': typeof AdminSalesCreateRoute
+  '/admin/purchases/': typeof AdminPurchasesIndexRoute
+  '/admin/sales/': typeof AdminSalesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/products'
+    | '/services'
+    | '/admin/customers'
+    | '/admin/dashboard'
+    | '/admin/inventory'
+    | '/admin/ledger'
+    | '/admin/login'
+    | '/admin/payments'
+    | '/admin/products'
+    | '/admin/suppliers'
+    | '/admin/purchases/create'
+    | '/admin/sales/create'
+    | '/admin/purchases/'
+    | '/admin/sales/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/products'
+    | '/services'
+    | '/admin/customers'
+    | '/admin/dashboard'
+    | '/admin/inventory'
+    | '/admin/ledger'
+    | '/admin/login'
+    | '/admin/payments'
+    | '/admin/products'
+    | '/admin/suppliers'
+    | '/admin/purchases/create'
+    | '/admin/sales/create'
+    | '/admin/purchases'
+    | '/admin/sales'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/products'
+    | '/services'
+    | '/admin/customers'
+    | '/admin/dashboard'
+    | '/admin/inventory'
+    | '/admin/ledger'
+    | '/admin/login'
+    | '/admin/payments'
+    | '/admin/products'
+    | '/admin/suppliers'
+    | '/admin/purchases/create'
+    | '/admin/sales/create'
+    | '/admin/purchases/'
+    | '/admin/sales/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  ProductsRoute: typeof ProductsRoute
+  ServicesRoute: typeof ServicesRoute
+  AdminCustomersRoute: typeof AdminCustomersRoute
+  AdminDashboardRoute: typeof AdminDashboardRoute
+  AdminInventoryRoute: typeof AdminInventoryRoute
+  AdminLedgerRoute: typeof AdminLedgerRoute
+  AdminLoginRoute: typeof AdminLoginRoute
+  AdminPaymentsRoute: typeof AdminPaymentsRoute
+  AdminProductsRoute: typeof AdminProductsRoute
+  AdminSuppliersRoute: typeof AdminSuppliersRoute
+  AdminPurchasesCreateRoute: typeof AdminPurchasesCreateRoute
+  AdminSalesCreateRoute: typeof AdminSalesCreateRoute
+  AdminPurchasesIndexRoute: typeof AdminPurchasesIndexRoute
+  AdminSalesIndexRoute: typeof AdminSalesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +260,139 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products': {
+      id: '/products'
+      path: '/products'
+      fullPath: '/products'
+      preLoaderRoute: typeof ProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/customers': {
+      id: '/admin/customers'
+      path: '/admin/customers'
+      fullPath: '/admin/customers'
+      preLoaderRoute: typeof AdminCustomersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/dashboard': {
+      id: '/admin/dashboard'
+      path: '/admin/dashboard'
+      fullPath: '/admin/dashboard'
+      preLoaderRoute: typeof AdminDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/inventory': {
+      id: '/admin/inventory'
+      path: '/admin/inventory'
+      fullPath: '/admin/inventory'
+      preLoaderRoute: typeof AdminInventoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/ledger': {
+      id: '/admin/ledger'
+      path: '/admin/ledger'
+      fullPath: '/admin/ledger'
+      preLoaderRoute: typeof AdminLedgerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/login': {
+      id: '/admin/login'
+      path: '/admin/login'
+      fullPath: '/admin/login'
+      preLoaderRoute: typeof AdminLoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/payments': {
+      id: '/admin/payments'
+      path: '/admin/payments'
+      fullPath: '/admin/payments'
+      preLoaderRoute: typeof AdminPaymentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/products': {
+      id: '/admin/products'
+      path: '/admin/products'
+      fullPath: '/admin/products'
+      preLoaderRoute: typeof AdminProductsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/suppliers': {
+      id: '/admin/suppliers'
+      path: '/admin/suppliers'
+      fullPath: '/admin/suppliers'
+      preLoaderRoute: typeof AdminSuppliersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/purchases/': {
+      id: '/admin/purchases/'
+      path: '/admin/purchases'
+      fullPath: '/admin/purchases/'
+      preLoaderRoute: typeof AdminPurchasesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/purchases/create': {
+      id: '/admin/purchases/create'
+      path: '/admin/purchases/create'
+      fullPath: '/admin/purchases/create'
+      preLoaderRoute: typeof AdminPurchasesCreateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/sales/': {
+      id: '/admin/sales/'
+      path: '/admin/sales'
+      fullPath: '/admin/sales/'
+      preLoaderRoute: typeof AdminSalesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/sales/create': {
+      id: '/admin/sales/create'
+      path: '/admin/sales/create'
+      fullPath: '/admin/sales/create'
+      preLoaderRoute: typeof AdminSalesCreateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  ProductsRoute: ProductsRoute,
+  ServicesRoute: ServicesRoute,
+  AdminCustomersRoute: AdminCustomersRoute,
+  AdminDashboardRoute: AdminDashboardRoute,
+  AdminInventoryRoute: AdminInventoryRoute,
+  AdminLedgerRoute: AdminLedgerRoute,
+  AdminLoginRoute: AdminLoginRoute,
+  AdminPaymentsRoute: AdminPaymentsRoute,
+  AdminProductsRoute: AdminProductsRoute,
+  AdminSuppliersRoute: AdminSuppliersRoute,
+  AdminPurchasesCreateRoute: AdminPurchasesCreateRoute,
+  AdminSalesCreateRoute: AdminSalesCreateRoute,
+  AdminPurchasesIndexRoute: AdminPurchasesIndexRoute,
+  AdminSalesIndexRoute: AdminSalesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
