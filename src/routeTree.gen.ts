@@ -22,6 +22,7 @@ import { Route as AdminLoginRouteImport } from './routes/admin.login'
 import { Route as AdminPaymentsRouteImport } from './routes/admin.payments'
 import { Route as AdminProductsRouteImport } from './routes/admin.products'
 import { Route as AdminReportsRouteImport } from './routes/admin.reports'
+import { Route as AdminSettingsRouteImport } from './routes/admin.settings'
 import { Route as AdminSuppliersRouteImport } from './routes/admin.suppliers'
 import { Route as AdminPurchasesIndexRouteImport } from './routes/admin.purchases.index'
 import { Route as AdminPurchasesCreateRouteImport } from './routes/admin.purchases.create'
@@ -93,6 +94,11 @@ const AdminReportsRoute = AdminReportsRouteImport.update({
   path: '/admin/reports',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminSettingsRoute = AdminSettingsRouteImport.update({
+  id: '/admin/settings',
+  path: '/admin/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminSuppliersRoute = AdminSuppliersRouteImport.update({
   id: '/admin/suppliers',
   path: '/admin/suppliers',
@@ -133,6 +139,7 @@ export interface FileRoutesByFullPath {
   '/admin/payments': typeof AdminPaymentsRoute
   '/admin/products': typeof AdminProductsRoute
   '/admin/reports': typeof AdminReportsRoute
+  '/admin/settings': typeof AdminSettingsRoute
   '/admin/suppliers': typeof AdminSuppliersRoute
   '/admin/purchases/create': typeof AdminPurchasesCreateRoute
   '/admin/sales/create': typeof AdminSalesCreateRoute
@@ -153,6 +160,7 @@ export interface FileRoutesByTo {
   '/admin/payments': typeof AdminPaymentsRoute
   '/admin/products': typeof AdminProductsRoute
   '/admin/reports': typeof AdminReportsRoute
+  '/admin/settings': typeof AdminSettingsRoute
   '/admin/suppliers': typeof AdminSuppliersRoute
   '/admin/purchases/create': typeof AdminPurchasesCreateRoute
   '/admin/sales/create': typeof AdminSalesCreateRoute
@@ -174,6 +182,7 @@ export interface FileRoutesById {
   '/admin/payments': typeof AdminPaymentsRoute
   '/admin/products': typeof AdminProductsRoute
   '/admin/reports': typeof AdminReportsRoute
+  '/admin/settings': typeof AdminSettingsRoute
   '/admin/suppliers': typeof AdminSuppliersRoute
   '/admin/purchases/create': typeof AdminPurchasesCreateRoute
   '/admin/sales/create': typeof AdminSalesCreateRoute
@@ -196,6 +205,7 @@ export interface FileRouteTypes {
     | '/admin/payments'
     | '/admin/products'
     | '/admin/reports'
+    | '/admin/settings'
     | '/admin/suppliers'
     | '/admin/purchases/create'
     | '/admin/sales/create'
@@ -216,6 +226,7 @@ export interface FileRouteTypes {
     | '/admin/payments'
     | '/admin/products'
     | '/admin/reports'
+    | '/admin/settings'
     | '/admin/suppliers'
     | '/admin/purchases/create'
     | '/admin/sales/create'
@@ -236,6 +247,7 @@ export interface FileRouteTypes {
     | '/admin/payments'
     | '/admin/products'
     | '/admin/reports'
+    | '/admin/settings'
     | '/admin/suppliers'
     | '/admin/purchases/create'
     | '/admin/sales/create'
@@ -257,6 +269,7 @@ export interface RootRouteChildren {
   AdminPaymentsRoute: typeof AdminPaymentsRoute
   AdminProductsRoute: typeof AdminProductsRoute
   AdminReportsRoute: typeof AdminReportsRoute
+  AdminSettingsRoute: typeof AdminSettingsRoute
   AdminSuppliersRoute: typeof AdminSuppliersRoute
   AdminPurchasesCreateRoute: typeof AdminPurchasesCreateRoute
   AdminSalesCreateRoute: typeof AdminSalesCreateRoute
@@ -357,6 +370,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AdminReportsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/settings': {
+      id: '/admin/settings'
+      path: '/admin/settings'
+      fullPath: '/admin/settings'
+      preLoaderRoute: typeof AdminSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/suppliers': {
       id: '/admin/suppliers'
       path: '/admin/suppliers'
@@ -409,6 +429,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminPaymentsRoute: AdminPaymentsRoute,
   AdminProductsRoute: AdminProductsRoute,
   AdminReportsRoute: AdminReportsRoute,
+  AdminSettingsRoute: AdminSettingsRoute,
   AdminSuppliersRoute: AdminSuppliersRoute,
   AdminPurchasesCreateRoute: AdminPurchasesCreateRoute,
   AdminSalesCreateRoute: AdminSalesCreateRoute,
